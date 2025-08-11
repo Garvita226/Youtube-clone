@@ -36,18 +36,18 @@ const WatchPage = () => {
           <div className='font-bold text-xl text-justify'>{snippet?.title}</div>
 
           {/* Actions Section */}
-          <div className='grid grid-flow-col my-2 items-center'>
-            <div className='flex col-span-3 justify-between pr-16'>
-              <div className='font-semibold text-lg bg-gray-100 px-2 rounded-sm cursor-pointer mr-3'> {snippet?.channelTitle} </div>
-              <button type='button' className='text-sm font-medium bg-black text-white rounded-full px-4 cursor-pointer'>Subscribe</button>
+          <div className='flex my-2 items-center justify-between'>
+            <div className='flex justify-between items-center pr-16'>
+              <div className='font-semibold text-lg bg-gray-100 px-4 py-1 rounded-md cursor-pointer mr-4'> {snippet?.channelTitle} </div>
+              <button type='button' className='text-sm font-medium bg-black text-white rounded-full px-4 py-2 cursor-pointer'>Subscribe</button>
             </div>
-            <div className='col-span-9 flex justify-between items-center pl-6 pr-4 ml-10 max-w-96'>
+            <div className=' flex justify-between items-center '>
               <span className='bg-gray-100 px-2 py-1 rounded-full'>
                 <span className='text-2xl cursor-pointer'>👍🏿</span>
                 <span className='text-md font-medium'>{statistics?.likeCount}  </span>
                 <span className='text-2xl ml-3 cursor-pointer'> 👎🏿</span>
               </span>
-              <span className='text-md font-medium bg-gray-100 px-3 py-1 rounded-full cursor-pointer'>➡️ Share</span>
+              <span className='text-md font-medium bg-gray-100 px-3 py-2 ml-4 rounded-full cursor-pointer'>➡️ Share</span>
               {/* <span className='text-2xl font-medium bg-gray-100 px-2 py-1 rounded-full'>...</span> */}
             </div>
           </div>
