@@ -17,6 +17,7 @@ const Header = () => {
     }
 
     const handleSearchVideos = async (suggestion) => {
+        setSearchText(suggestion)
         const data = await fetch(YOUTUBE_SEARCH_VIDEOS_API + suggestion)
         const json = await data.json()
         dispatch(searchVideos(json.items))

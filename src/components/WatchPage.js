@@ -4,6 +4,7 @@ import useOpacity from '../utils/useOpacity';
 import useScroll from '../utils/useScroll';
 import useVideoDetails from '../utils/useVideoDetails';
 import CommentContainer from './CommentContainer';
+import LiveChat from './LiveChat';
 
 const WatchPage = () => {
   useScroll();
@@ -26,8 +27,10 @@ const WatchPage = () => {
   return details && (
 
     // Embedded video section
-    <div className={'grid grid-flow-col transition duration-100 ease-in-out py-6 px-24 opacity-' + opacity}>
-      <div className='col-span-5'>
+    <div className={'grid grid-flow-col grid-cols-12 w-full transition duration-100 ease-in-out py-6 px-16 opacity-' + opacity}>
+
+      {/* Video Section */}
+      <div className='col-span-7'>
         <iframe className='rounded-xl' width="673" height="370" src={"https://www.youtube.com/embed/" + videoId} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
 
         <div className='w-[42rem] my-2 px-1'>
@@ -69,6 +72,12 @@ const WatchPage = () => {
           </div>)}
 
         </div>
+      </div>
+
+
+      {/* Live Chat Section */}
+      <div className='col-span-5 pr-4'>
+        <LiveChat/>
       </div>
     </div>
   )

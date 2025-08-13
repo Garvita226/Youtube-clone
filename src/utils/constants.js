@@ -16,3 +16,5 @@ export const YOUTUBE_SEARCH_VIDEOS_API = 'https://www.googleapis.com/youtube/v3/
 
 export const COMMENTS_API = 'https://www.googleapis.com/youtube/v3/commentThreads?part=id,replies,snippet&maxResults=100&key=' + GOOGLE_API_KEY + '&videoId='
 
+export const LIVE_CHAT_COUNT = 100;
+
